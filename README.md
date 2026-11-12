@@ -1,5 +1,7 @@
 # Anime Catalog – Java Selenium & REST Assured Automation
 
+https://github.com/user-attachments/assets/03bc6363-ec82-461c-af7f-65b1742a34e0
+
 Maven + Java 17 + TestNG framework using:
 - Selenium WebDriver with Page Object Model (POM) foundation
 - REST Assured for API testing
@@ -12,9 +14,12 @@ Maven + Java 17 + TestNG framework using:
 
 The supplied ZIP contains Playwright **API tests only**; it does not contain browser UI specs, page objects, frontend URLs, or UI selectors. Therefore:
 - The existing API scenarios have been ported to REST Assured.
+
+<img width="267" height="106" alt="image" src="https://github.com/user-attachments/assets/10688a6a-f5ef-42d8-9e3e-f3af4532e96b" />
+
 - Selenium, WebDriver setup, `BasePage`, and a POM package are included as the UI automation foundation.
 - No speculative UI tests or locators have been invented. To complete real Selenium page objects, provide the Anime Catalog frontend URL and its page/element details.
-- The Swagger URL supplied (`http://localhost:8080/swagger-ui/index.html`) is a local URL. It is documented as the API reference, but cannot be inspected from another machine/session. API routes below are ported from the Playwright API client and tests in your archive.
+- The Swagger URL supplied (`http://localhost:8080/swagger-ui/index.html`) is a local URL. It is documented as the API reference, but cannot be inspected from another machine/session.
 
 ## Project structure
 
@@ -74,7 +79,7 @@ export API_ADMIN_USERNAME=superadmin
 export API_TIMEOUT_MS=15000
 ```
 
-The API uses the `X-Username` request header for the acting user, matching the original Playwright fixtures. The configured administrator defaults to `superadmin`.
+The API uses the `X-Username` request header for the acting user. The configured administrator defaults to `superadmin`.
 
 ## Run tests
 
@@ -93,7 +98,7 @@ mvn -Dtest=AdminUsersApiTest test
 mvn -Dtest=ProfileApiTest test
 ```
 
-## API routes ported from the supplied Playwright project
+## API routes
 
 | Resource | Method | Route |
 |---|---|---|
@@ -120,4 +125,4 @@ The source archive contains no UI tests, so `UiTestBase` and the page-object fou
 - Do not run mutation tests against production data.
 - The original profile password and username mutation operations are not included in the default tests because they can alter the shared administrator account.
 - The backend's genre IDs `[22, 27]` from the old anime test are not assumed to exist. The Java anime CRUD test creates a temporary genre first and uses its returned ID.
-- The original Playwright README warns that an unfiltered anime list may expose a backend PostgreSQL `lower(bytea)` issue. If that backend defect remains, the list test may fail until the server query is corrected.
+- Warning, an unfiltered anime list may expose a backend PostgreSQL `lower(bytea)` issue. If that backend defect remains, the list test may fail until the server query is corrected.
