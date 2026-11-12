@@ -1,6 +1,11 @@
 # Anime Catalog – Java Selenium & REST Assured Automation
 
-https://github.com/user-attachments/assets/8e8713c9-a06b-4586-8093-2b6efe066159
+<p>
+<picture>
+    <img width="1280" height="720" alt="Anime_Catalog_Selenium_TestNG_RestAssured_Api_Tests" src="https://github.com/user-attachments/assets/ac1f8e14-fa09-4fcb-b01a-15df4ab95b90" />    
+</picture>    
+</p>
+
 
 Maven + Java 17 + TestNG framework using:
 - Selenium WebDriver with Page Object Model (POM) foundation
@@ -12,8 +17,8 @@ Maven + Java 17 + TestNG framework using:
 
 ## Important notes about the conversion
 
-The supplied ZIP contains Playwright **API tests only**; it does not contain browser UI specs, page objects, frontend URLs, or UI selectors. Therefore:
-- The existing API scenarios have been ported to REST Assured.
+This project does not contain browser UI specs, page objects, frontend URLs, or UI selectors. Therefore:
+- The API scenarios have been ported to REST Assured.
 
 <img width="267" height="106" alt="image" src="https://github.com/user-attachments/assets/10688a6a-f5ef-42d8-9e3e-f3af4532e96b" />
 
