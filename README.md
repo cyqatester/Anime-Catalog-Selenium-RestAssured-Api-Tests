@@ -1,6 +1,6 @@
 # Anime Catalog – Java Selenium & REST Assured Automation
 
-https://github.com/user-attachments/assets/03bc6363-ec82-461c-af7f-65b1742a34e0
+https://github.com/user-attachments/assets/8e8713c9-a06b-4586-8093-2b6efe066159
 
 Maven + Java 17 + TestNG framework using:
 - Selenium WebDriver with Page Object Model (POM) foundation
